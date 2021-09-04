@@ -28,14 +28,26 @@ On clicking the app icon it will open an splash screen which uses coroutine scop
  On selecting a country user will navigate to Country details page where few details of country like flag, name,
  currency, languages are displayed
 
-
+<h3>Code</h3>
 The app consists of
  1. Splash Screen
  2. CountriesListActivity
  3. CountriesListFragment where countries list is displayed with an option to search
  4. CountryDetailsFragment for displaying details of selected country
 
+<h3>Edge cases</h3>
 I have covered edge cases like no Internet availability, No results for the search, etc
 
-**Note**: The API response is a bit slow which based on server.
+<h3>App Screenshots</h3>
+Check-out the folder https://github.com/pavan5208/android_rebtel_countries/tree/master/refrences
+
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/1_splash.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/2_list.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/3_details.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/4_search.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/5_details.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/6_no_network.jpg)
+![This is an image](https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/7_no_results.jpg)
+
+**Note**: The API response is a bit slow which is based on server.
  Also I haven't covered any test cases as it was not mentioned

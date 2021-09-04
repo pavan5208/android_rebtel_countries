@@ -9,34 +9,34 @@ import com.rebtel.countries.R
 import com.rebtel.countries.domain.model.CountriesListResponseItem
 import com.rebtel.countries.ui.adapters.viewholder.CountryViewHolder
 
-class CountriesListAdapter(private val onCurrencySelected: (model: CountriesListResponseItem) -> Unit) :
+class CountriesListAdapter(private val onCountrySelected: (model: CountriesListResponseItem) -> Unit) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val currencyTypesList = arrayListOf<CountriesListResponseItem>()
+    private val countriesList = arrayListOf<CountriesListResponseItem>()
 
 
     fun setData(value: ArrayList<CountriesListResponseItem>) {
-        val diffResult = DiffUtil.calculateDiff(DiffCallback(currencyTypesList, value))
+        val diffResult = DiffUtil.calculateDiff(DiffCallback(countriesList, value))
         diffResult.dispatchUpdatesTo(this)
-        currencyTypesList.clear()
-        currencyTypesList.addAll(value)
+        countriesList.clear()
+        countriesList.addAll(value)
         notifyDataSetChanged()
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return  CountryViewHolder(onCurrencySelected, LayoutInflater.from(parent.context).inflate(
+        return  CountryViewHolder(onCountrySelected, LayoutInflater.from(parent.context).inflate(
             R.layout.item_country,
             parent,
             false)
         )
     }
 
-    override fun getItemCount(): Int = currencyTypesList.size
+    override fun getItemCount(): Int = countriesList.size
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as CountryViewHolder).setData(currencyTypesList[position])
+        (holder as CountryViewHolder).setData(countriesList[position])
     }
 
 

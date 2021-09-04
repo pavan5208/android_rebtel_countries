@@ -107,7 +107,6 @@ class CountriesListFragment : DaggerFragment() {
             cl_search?.show()
             rv_countries?.show()
         } else {
-            cl_search?.remove()
             rv_countries?.remove()
         }
     }

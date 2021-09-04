@@ -11,17 +11,27 @@ class CountryViewHolder(
     private val clickListener: (CountriesListResponseItem) -> Unit,
     itemView: View
 ) : RecyclerView.ViewHolder(itemView) {
-    fun setData(currencyType: CountriesListResponseItem) {
-        itemView.apply {
-            this.setOnClickListener {
-                clickListener.invoke(currencyType)
-            }
-                GlideHandle.loadSVG(itemView.im_flag,
-                    currencyType.flag?:"",
-                    R.drawable.ic_loading
-                )
+    var countryDetailsData: CountriesListResponseItem? = null
 
-            txt_country_name?.text = currencyType.name
+    init {
+        itemView.setOnClickListener {
+            countryDetailsData?.let {
+                clickListener.invoke(it)
+            }
+        }
+    }
+
+    fun setData(countryDetails: CountriesListResponseItem) {
+        countryDetailsData = countryDetails
+
+        itemView.apply {
+            GlideHandle.loadSVG(
+                itemView.im_flag,
+                countryDetails.flag ?: "",
+                R.drawable.ic_loading
+            )
+
+            txt_country_name?.text = countryDetails.name
 
         }
     }
