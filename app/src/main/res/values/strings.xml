@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rebtel Countries</string>
+    <string name="select_country">Select Country</string>
+    <string name="search_country">Searrch Country</string>
+    <string name="no_results">No Results Found</string>
+    <string name="retry">Retry</string>
+    <string name="no_data">No Data Found</string>
+    <string name="something_wrong">Something went wrong</string>
+    <string name="network_error">No Network connection</string>
+    <string name="na">NA</string>
+    <string name="country_details">Country Details</string>
+
+</resources>
