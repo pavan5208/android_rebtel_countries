@@ -26,7 +26,11 @@ On clicking the app icon it will open an splash screen which uses coroutine scop
  On delay completion it will take the user to home screen(CountriesListActivity) which has a fragment container added to it.
  By default CountriesListFragment will be launched which has a list of countries loaded from an API and a search bar for searching countries with name, native name, short code, etc.
  On selecting a country user will navigate to Country details page where few details of country like flag, name,
- currency, languages are displayed
+ currency, languages are displayed. 
+ 
+ <h3>APK Download</h3>
+ To Test the app you can download the APK here
+https://github.com/pavan5208/android_rebtel_countries/blob/master/refrences/app-debug.apk
 
 <h3>Code</h3>
 The app consists of
